@@ -219,23 +219,23 @@ const AppointmentSuccessPage: React.FC = () => {
             </p>
           </div>
         </div>
+{/* Bottom Buttons */}
+<div className="w-full max-w-md mx-auto flex flex-col gap-3 sm:flex-row sm:justify-center">
+  <Button
+    variant="default"
+    size="sm"
+    className="w-full sm:w-auto px-5 py-2 text-base font-medium rounded-xl shadow-md flex items-center justify-center gap-2"
+    onClick={() => router.push("/view-appointment")}
+  >
+    <ArrowRight size={18} />
+    View My Appointments
+  </Button>
 
-        {/* Bottom Buttons */}
-        <div className="w-full max-w-2xl flex flex-col sm:flex-row gap-4">
-          <Button
-            variant="default"
-            size="lg"
-            className="flex-1 shadow-lg flex items-center justify-center gap-2"
-            onClick={() => router.push("/view-appointment")}
-          >
-            <ArrowRight size={18} />
-            View My Appointments
-          </Button>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="flex-1 shadow-lg flex items-center justify-center gap-2"
+<Button
+  variant="outline"
+  size="sm"
+  className="flex-1 shadow-lg flex items-center justify-center gap-2 py-2.5"
             onClick={() => {
               const doc = new jsPDF();
               doc.setFontSize(16);
